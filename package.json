@@ -1,5 +1,5 @@
 {
-  "name": "blitz-without-db-template",
+  "name": "@aigniter-site/jumppoint",
   "version": "0.30.5",
   "engines": {
     "node": "^14",
