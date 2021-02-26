@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
 import { Head } from 'blitz'
 
-type LayoutProps = {
-  title?: string
-  children: ReactNode
-}
+type LayoutProps = Required<
+  import('react').PropsWithChildren<{
+    title?: string
+  }>
+>
 
 const Layout = ({ title, children }: LayoutProps) => {
   return (
@@ -14,7 +14,7 @@ const Layout = ({ title, children }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {children}
+      <main>{children || {}}</main>
     </>
   )
 }
