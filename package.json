@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "blitz dev",
     "dev:watch:tsc": "tsc --watch --noEmit",
-    "gen:theme-typings": "chakra-cli tokens app/theme/index.ts",
     "build": "blitz build",
     "build:stats": "ANALYZE=true yarn run build",
     "start": "blitz start",
