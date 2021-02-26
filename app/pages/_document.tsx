@@ -15,7 +15,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <DocumentHead>
           {() => {
-            debugger
             const _ids = (this as any)?.props?.ids
             const _css = (this as any)?.props?.css
             return (
@@ -28,10 +27,6 @@ class MyDocument extends Document {
               )
             )
           }}
-          <style
-            data-emotion-css={(this as any)?.props?.ids?.join(' ')}
-            dangerouslySetInnerHTML={{ __html: (this as any)?.props?.css }}
-          />
         </DocumentHead>
         <body>
           <Main />
