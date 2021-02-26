@@ -14,7 +14,7 @@
     "lint": "eslint --cache --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "lint:fix": "eslint --fix --cache --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "test": "echo \"No tests yet\"",
-    "postinstall": "yarn run gen:theme-typings"
+    "postinstall": ""
   },
   "browserslist": [
     "defaults"
