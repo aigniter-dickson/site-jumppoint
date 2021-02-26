@@ -11,7 +11,7 @@
     "build": "blitz build",
     "build:stats": "ANALYZE=true yarn run build",
     "start": "blitz start",
-    "format": "prettier --ignore-path .gitignore --write \"./**/*.{ts,js,json,md}\"",
+    "format": "prettier --ignore-path .gitignore --write \"./**/*.{ts,js,json}\"",
     "lint": "eslint --cache --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "lint:fix": "eslint --fix --cache --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "style:fix": "(yarn run format; yarn run lint:fix;)",
