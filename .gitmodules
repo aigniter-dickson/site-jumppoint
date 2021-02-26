@@ -1,4 +1,0 @@
-[submodule ".template/blitz-without-db-template"]
-	path = .template/blitz-without-db-template
-	url = git@github.com:aigniter-dickson/blitz-without-db-template.git
-  ignore = dirty
