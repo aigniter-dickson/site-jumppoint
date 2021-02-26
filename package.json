@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "blitz dev",
-    "dev:watch:tsc": "tsc --watch --noEmit",
+    "dev:watch:tsc": "tsc --watch --noEmit --incremental --tsBuildInfoFile .tsbuildinfo",
+    "debug:dev": "INSPECT_BRK=true blitz dev",
     "build": "blitz build",
     "build:stats": "ANALYZE=true yarn run build",
     "start": "blitz start",
