@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./",
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,18 +19,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "preserveConstEnums": true,
-    "incremental": true,
-    "pretty": true,
+    "pretty": true
   },
-  "exclude": [
-    "public",
-    "node_modules",
-    ".blitz",
-  ],
-  "include": [
-    "types/**/*.d.ts",
-    "app",
-    "assets",
-    "content",
-  ]
+  "exclude": ["public", "node_modules", ".blitz"],
+  "include": ["types/**/*.d.ts", "app", "assets", "content"]
 }

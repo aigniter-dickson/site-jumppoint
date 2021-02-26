@@ -22,6 +22,15 @@ const webpack = (config, { buildId, dev, isServer, defaultLoaders, webpack }) =>
     })
   }
 
+  // Fixes packages that depend on fs/module module
+  // https://github.com/ben-rogerson/twin.examples/blob/master/next-styled-components/next.config.js#L5
+  // https://github.com/ben-rogerson/twin.macro/issues/327
+  if (!isServer) {
+    Object.assign(config, {
+      node: { fs: 'empty', module: 'empty' },
+    })
+  }
+
   return config
 }
 

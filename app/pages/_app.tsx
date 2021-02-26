@@ -1,9 +1,7 @@
 import { AppProps, ErrorComponent, useRouter } from 'blitz'
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary'
-import 'app/core/styles/app-base.css'
-import 'app/core/styles/app-components.css'
-import 'app/core/styles/app-utilities.css'
-// import { queryCache } from 'react-query'
+import { ErrorBoundary } from 'react-error-boundary'
+
+import GlobalStyles from 'app/core/theme/GlobalStyles'
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)
@@ -19,12 +17,17 @@ export default function App({ Component, pageProps }: AppProps) {
       //   queryCache.resetErrorBoundaries()
       // }}
     >
-      {getLayout(<Component {...pageProps} />)}
+      {getLayout(
+        <>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </>,
+      )}
     </ErrorBoundary>
   )
 }
 
-function RootErrorFallback({ error }: FallbackProps) {
+function RootErrorFallback({ error }: import('react-error-boundary').FallbackProps) {
   // if (error?.name === 'AuthenticationError') {
   //   return <LoginForm onSuccess={resetErrorBoundary} />
   // } else if (error?.name === 'AuthorizationError') {

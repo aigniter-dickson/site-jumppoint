@@ -1,4 +1,14 @@
 module.exports = {
-  presets: ['blitz/babel'],
-  plugins: [],
+  presets: [
+    [
+      'blitz/babel',
+      {
+        'preset-react': {
+          runtime: 'automatic',
+          importSource: '@emotion/react',
+        },
+      },
+    ],
+  ],
+  plugins: ['@emotion/babel-plugin', 'babel-plugin-macros'],
 }
