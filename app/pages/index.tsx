@@ -737,7 +737,7 @@ const Home: import('blitz').BlitzPage = () => {
   return (
     <>
       <Hero />
-      <AnotherHero />
+      {/* <AnotherHero /> */}
       <Intro />
       <Why />
       <CtaJoin />
@@ -747,7 +747,7 @@ const Home: import('blitz').BlitzPage = () => {
       <Showcase />
       <CtaSignup />
       <Faq />
-      <B />
+      {/* <B />
       <C />
       <GotoDetailsCard />
       <D />
@@ -763,7 +763,7 @@ const Home: import('blitz').BlitzPage = () => {
       <section id="showcase" />
       <section id="cta-signup-2" />
       <section id="q-and-a" />
-      <section id="contact" />
+      <section id="contact" /> */}
     </>
   )
 }

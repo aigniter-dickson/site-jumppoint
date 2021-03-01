@@ -28,7 +28,7 @@ export const Nav = () => (
   </nav>
 )
 
-export const Navbar = (props: any) => (
+export const N = (props: any) => (
   <header {...props} className={`relative w-screen bg-default ${props?.className || ''}`.trim()}>
     <div className="bg-" />
     <Container>
@@ -36,5 +36,7 @@ export const Navbar = (props: any) => (
     </Container>
   </header>
 )
+
+export const Navbar = () => <header>header</header>
 
 export default Navbar
