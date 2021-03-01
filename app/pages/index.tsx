@@ -62,11 +62,11 @@ const Intro = () => (
         <VStack tw="grid-cols-1 md:grid-cols-2">
           <div
             tw="relative w-full aspect-w-3 aspect-h-1 justify-self-center"
-            css={{ maxWidth: '25rem' }}
+            css={{ maxWidth: '35rem' }}
           >
             <Image src="/images/map1.png" layout="fill" objectFit="contain" alt="" aria-hidden />
           </div>
-          <VStack tw="gap-6">
+          <VStack tw="gap-6 text-center md:text-left md:order-first">
             <VStack tw="gap-2">
               <SHeadingGp>
                 <SectionTitle>智能物流網絡</SectionTitle>
