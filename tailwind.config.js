@@ -7,9 +7,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      borderRadius: {
+        DEFAULT: defaultTheme.borderRadius.lg,
+      },
       colors: {
         ...tailwindColors,
         ...colors,
+        onSurface: tailwindColors.blueGray[700],
       },
       // screens: {
       //   // xs: '384px',
@@ -25,4 +29,5 @@ module.exports = {
   variants: {
     extend: {},
   },
+  plugins: [require('@tailwindcss/aspect-ratio')],
 }

@@ -1,5 +1,7 @@
 import { AppProps, ErrorComponent, useRouter } from 'blitz'
 import { ErrorBoundary } from 'react-error-boundary'
+import tw, { css, theme } from 'twin.macro'
+import { Global } from '@emotion/react'
 
 import GlobalStyles from 'app/core/theme/GlobalStyles'
 
@@ -19,14 +21,19 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       {getLayout(
         <>
-          {process.env.NODE_ENV === 'development' && (
+          {/* {process.env.NODE_ENV === 'development' && (
             <style jsx global>{`
               body:hover *:not(svg) {
                 box-shadow: inset rgb(0, 255, 255) 0 0 0 0.5px, rgb(0, 255, 255) 0 0 0 0.5px;
               }
             `}</style>
-          )}
+          )} */}
           <GlobalStyles />
+          <Global
+            styles={css({
+              body: tw`text-onSurface`,
+            })}
+          />
           <Component {...pageProps} />
         </>,
       )}

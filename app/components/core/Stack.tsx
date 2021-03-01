@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
-export const HStack = tw.div`grid grid-flow-col`
-export const VStack = tw.div`grid grid-flow-row`
+export const HStack = tw.div`grid w-full grid-flow-col`
+export const VStack = tw.div`grid w-full grid-flow-row`
 
 export type StackProps = Partial<
   import('react').PropsWithChildren<{
@@ -15,7 +15,7 @@ export const Stack = (props: StackProps) => {
   const flow = direction === 'row' ? tw`grid-flow-row` : tw`grid-flow-col`
 
   return (
-    <div css={[tw`grid`, flow]} {...rest}>
+    <div css={[tw`grid w-full`, flow]} {...rest}>
       {children}
     </div>
   )
